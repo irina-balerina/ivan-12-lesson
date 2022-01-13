@@ -23,7 +23,7 @@ for(let i = 0; i < 2; i++) {
     console.log('error!');
     i--; //если условие не выполнено, то возвращаемся на шаг назад ( к prompt-ам)
   }
-};
+};  
 
 // определяем категорию пользователя по числу просм-х фильмов:
 
@@ -39,8 +39,38 @@ if(personalMovieDB.count < 10) {
 
 // Переписать цикл еще двумя способами:
 
+// while
+/*
+let i = 0;
+while(i <= 1) {
+  i += 1;
+  const a = prompt( 'Какой фильм вы уже посмотрели?', '' ),
+  b = prompt( 'На сколько оцените его?', '');
+  if(a != null && b != null && a != '' && b != '' && a.length < 50) {
+    personalMovieDB.movies[a] = b;
+    console.log('done!'); 
+  } else {
+    console.log('error!');
+    i--; //если условие не выполнено, то возвращаемся на шаг назад ( к prompt-ам)
+  }
+};    */
 
-
+ // do while
+/*
+ let i = 0;
+ do {
+   i += 1;
+  const a = prompt( 'Какой фильм вы уже посмотрели?', '' ),
+        b = prompt( 'На сколько оцените его?', '');
+  if(a != null && b != null && a != '' && b != '' && a.length < 50) {
+    personalMovieDB.movies[a] = b;
+    console.log('done!'); 
+  } else {
+    console.log('error!');
+    i--; //если условие не выполнено, то возвращаемся на шаг назад ( к prompt-ам)
+  }
+ }
+ while(i <= 1 );  */
 
 
 
